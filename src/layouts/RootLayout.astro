@@ -1,0 +1,33 @@
+---
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unlock the world of words effortlessly with Flip-Cards – the app designed for simple, engaging, and effective word learning.">
+    <meta name="keywords" content="Flip-Cards, word learning, flashcards, language learning, vocabulary, AI-backed learning, education app">
+    <meta name="author" content="Anton Rochniak">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourlandingpage.com">
+    <meta property="og:title" content="Flip-Cards: Your Simple Path to Word Mastery">
+    <meta property="og:description" content="Unlock the world of words effortlessly with Flip-Cards – the app designed for simple, engaging, and effective word learning.">
+    <meta property="og:image" content="https://www.yourlandingpage.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourlandingpage.com">
+    <meta property="twitter:title" content="Flip-Cards: Your Simple Path to Word Mastery">
+    <meta property="twitter:description" content="Unlock the world of words effortlessly with Flip-Cards – the app designed for simple, engaging, and effective word learning.">
+    <meta property="twitter:image" content="https://www.yourlandingpage.com/twitter-image.jpg">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>{title}</title>
+</head>
+<body>
+    <slot />
+</body>
+</html>

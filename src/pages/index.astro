@@ -1,0 +1,87 @@
+---
+import Card from '../components/Card.astro'
+import RootLayout from '../layouts/RootLayout.astro'
+---
+<RootLayout title="Flip-Cards: Your Simple Path to Word Mastery">
+	<main class="flex flex-col items-center justify-center bg-gray-100">
+		<section class="w-full flex flex-col md:flex-row items-center justify-center py-8 md:py-16 px-4 md:px-0">
+			<div class="md:w-1/2 text-center md:text-left px-4">
+				<h2 class="text-4xl font-bold text-blue-600">Welcome to Flip-Cards: Your Simple Path to Word Mastery!</h2>
+				<p class="mt-4 text-lg text-gray-700">
+					Unlock the world of words effortlessly with Flip-Cards – the app designed with a single purpose in mind: making word learning simple, engaging, and effective. Whether you're a language enthusiast, a student, or someone keen on expanding your vocabulary, Flip-Cards is your go-to companion for hassle-free learning.
+				</p>
+			</div>
+			<div class="md:w-1/2">
+				<div class="w-[40%] relative mx-auto my-6">
+					<img
+						alt="upsert screen from the app"
+						class="absolute w-full -translate-x-20 border-purple-700/60 border-2 object-contain rounded-md shadow-md top-0 rotate-12"
+						src="/upsert-white.PNG"
+					/>
+					<img
+						alt="cards screen from the app"
+						class="w-full translate-x-20 object-contain rounded-md shadow-xl -rotate-3 border-blue-800/70 border-2"
+						src="/cards-black.PNG"
+					/>
+				</div>
+			</div>
+		</section>
+		<section class="py-8 md:py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 w-fit">
+			<Card
+				title="Simplicity at Its Best"
+				body="Experience the power of simplicity in learning. We've crafted Flip-Cards with a clean design and intuitive features, ensuring a straightforward and enjoyable learning journey. Focus on mastering words without unnecessary complexity."
+				class="border-red-500/20 border"
+				titleClass="bg-red-500"
+			/>
+			<Card 
+				title="Enhanced User Experience"
+				body="Discover the joy of learning with small yet impactful features that elevate your experience. From seamless navigation to clever usability enhancements, Flip-Cards takes every step to make your learning sessions both efficient and enjoyable."
+				class="border-green-700/20 border"
+				titleClass="bg-green-700"
+			/>
+			<Card 
+				title="Installable & Lightweight"
+				body="Enjoy the convenience of installing Flip-Cards on your device for a native app feel. Whats more, our app weighs in at just around 2MB, ensuring that your valuable device space is used efficiently without compromising on features."
+				class="border-cyan-800/20 border"
+				titleClass="bg-cyan-800"
+			/>
+			<Card 
+				title="AI-Backed Learning"
+				body="Immerse yourself in a smarter learning experience with AI-backed features. Our intelligent algorithms are continuously evolving to enhance your enjoyment and effectiveness in acquiring new words. Stay tuned for exciting AI-driven updates!"
+				class="border-blue-700/20 border"
+				titleClass="bg-blue-700"
+			/>
+			<Card 
+				title="Sync Across All Devices"
+				body="Break free from device constraints. Flip-Cards seamlessly syncs your learning data across all your devices. Add new words on your tablet, review them on your phone – your learning journey stays with you wherever you go."
+				class="border-violet-700/20 border"
+				titleClass="bg-violet-700"
+			/>
+		</section>
+		<section class="w-full py-16 px-4 md:px-0">
+			<h2 class="text-4xl font-bold text-center text-blue-600">Ready to embark on your word mastery adventure? Watch our "How it Works" video to see Flip-Cards in action, and let the journey begin!</h2>
+			<p class="mt-4 text-lg text-gray-700 text-center">Step-by-step guide on how to use the app</p>
+		</section>
+		<section class="w-full py-16 px-4 md:px-0 grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div class="px-4">
+				<h3 class="text-2xl font-bold text-blue-600">Free Plan</h3>
+				<p class="mt-2 text-lg text-gray-700">Details of the free plan</p>
+			</div>
+			<div class="px-4">
+				<h3 class="text-2xl font-bold text-blue-600">Premium Plan</h3>
+				<p class="mt-2 text-lg text-gray-700">Details of the premium plan</p>
+			</div>
+			<div class="px-4">
+				<h3 class="text-2xl font-bold text-blue-600">Enterprise Plan</h3>
+				<p class="mt-2 text-lg text-gray-700">Details of the enterprise plan</p>
+			</div>
+		</section>
+		<section class="w-full text-center py-16 px-4 md:px-0 bg-blue-100/60">
+			<h2 class="text-4xl font-bold text-blue-600">Ready to Get Started?</h2>
+			<p class="mt-4 text-lg text-gray-700">A brief description of the benefits of using the app</p>
+			<div class="mt-8">
+				<button class="bg-blue-600 text-white">Start Free Trial</button>
+			</div>
+		</section>
+	</main>
+</RootLayout>
