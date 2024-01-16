@@ -12,21 +12,21 @@ import RootLayout from '../layouts/RootLayout.astro'
 				</p>
 			</div>
 			<div class="md:w-1/2">
-				<div class="w-[40%] relative mx-auto my-6">
+				<div class="w-[40%] relative mx-auto my-6 aspect-[30/61]">
 					<img
 						alt="upsert screen from the app"
-						class="absolute w-full -translate-x-20 border-purple-700/60 border-2 object-contain rounded-md shadow-md top-0 rotate-12"
+						class="absolute w-full -translate-x-20 border-purple-700/60 border-2 object-contain rounded-md shadow-md top-0 rotate-12 h-full"
 						src="/upsert-white.PNG"
 					/>
 					<img
 						alt="cards screen from the app"
-						class="w-full translate-x-20 object-contain rounded-md shadow-xl -rotate-3 border-blue-800/70 border-2"
+						class="w-full h-full translate-x-20 object-contain rounded-md shadow-xl -rotate-3 border-blue-800/70 border-2"
 						src="/cards-black.PNG"
 					/>
 				</div>
 			</div>
 		</section>
-		<section class="py-8 md:py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 w-fit">
+		<section class="py-8 md:py-16 px-4 flex sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 overflow-auto w-screen">
 			<Card
 				title="Simplicity at Its Best"
 				body="Experience the power of simplicity in learning. We've crafted Flip-Cards with a clean design and intuitive features, ensuring a straightforward and enjoyable learning journey. Focus on mastering words without unnecessary complexity."
