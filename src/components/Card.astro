@@ -1,14 +1,13 @@
 ---
 interface Props {
 	title: string
-	body: string
 	class?: string
 	titleClass?: string
 }
 
-const { title, body, titleClass, class: className } = Astro.props;
+const { title, titleClass, class: className } = Astro.props;
 ---
 <div class:list={["flex flex-col bg-gray-100 rounded-2xl shadow-lg overflow-hidden max-w-80 min-h-80 max-sm:w-60 shrink-0", className]}>
 	<h3 class:list={["text-lg font-bold text-white p-4 min-h-24 flex items-center", titleClass]}>{title}</h3>
-	<p class="text-sm p-4 grow flex items-center text-slate-700">{body}</p>
+	<div class="text-sm p-4 grow flex items-center text-slate-700"><slot /></div>
 </div>
