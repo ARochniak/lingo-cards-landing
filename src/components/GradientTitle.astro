@@ -1,0 +1,11 @@
+---
+interface Props {
+  class?: number;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class:list={["text-2xl md:text-4xl font-bold bg-gradient-to-r from-blue-700 via-yellow-600 to-pink-700 inline-block text-transparent bg-clip-text", className]}>
+  <slot />
+</div>
