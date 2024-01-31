@@ -6,13 +6,13 @@ import RootLayout from '../layouts/RootLayout.astro';
 
 <RootLayout title="Lingo Cards: Your Simple Path to Word Mastery">
   <main class="flex flex-col items-center justify-center bg-gray-100 gap-12 md:gap-20">
-    <section class="w-full flex flex-col md:flex-row items-center justify-center px-4 md:px-0">
-      <div class="md:w-1/2 text-center md:text-left px-4">
-        <h2 class="text-4xl font-bold text-blue-600">Welcome to <strong class="">Lingo Cards</strong>: Your Simple Path to Word Mastery!</h2>
-        <p class="mt-4 text-lg text-gray-700">
+    <section class="w-full flex flex-col md:flex-row items-center justify-center mt-4 px-4 md:mt-12 md:px-12">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-2xl md:text-4xl font-bold text-blue-600">Welcome to <strong class="">Lingo Cards</strong>: Your Simple Path to Word Mastery!</h2>
+        <p class="mt-4 text-sm md:text-lg text-gray-700">
           Unlock the world of words effortlessly with <strong class="">Lingo Cards</strong> – the app designed with a single purpose in mind:
-          making word learning simple, engaging, and effective. Whether you're a language enthusiast, a student, or
-          someone keen on expanding your vocabulary, <strong class="">Lingo Cards</strong> is your go-to companion for hassle-free learning.
+          making word learning simple, engaging, and effective. <span class="hidden md:inline">Whether you're a language enthusiast, a student, or
+          someone keen on expanding your vocabulary, <strong class="">Lingo Cards</strong> is your go-to companion for hassle-free learning.</span>
         </p>
       </div>
       <div class="md:w-1/2">
@@ -31,7 +31,7 @@ import RootLayout from '../layouts/RootLayout.astro';
       </div>
     </section>
     <section
-      class="px-4 flex sm:grid sm:grid-cols-2 md:grid-cols-3 gap-8 overflow-auto w-screen pb-4 max-sm:-mb-4 justify-items-center"
+      class="px-4 md:px-12 flex sm:grid sm:grid-cols-2 md:grid-cols-3 gap-8 overflow-auto w-screen pb-4 max-sm:-mb-4 justify-items-center"
     >
       <Card
         title="Simplicity at Its Best"
@@ -48,11 +48,11 @@ import RootLayout from '../layouts/RootLayout.astro';
     <p>Discover the joy of learning with small yet impactful features that elevate your experience. From seamless navigation to clever usability enhancements, <strong>Lingo Cards</strong> takes every step to make your learning sessions both efficient and enjoyable.</p>
     </Card>
       <Card
-        title="Installable & Lightweight"
+        title="Web-Based & Installable"
         class="border-cyan-800/20 border"
         titleClass="bg-cyan-800"
       >
-    <p>Enjoy the convenience of installing <strong>Lingo Cards</strong> on your device for a native app feel. Whats more, our app weighs in at just around 2MB, ensuring that your valuable device space is used efficiently without compromising on features.</p>
+    <p>Experience <strong>Lingo-Cards</strong> as a sleek web page for instant access. Need more? Install it with just a tap for a native app feel. Our web-first approach ensures effortless learning, with a mere 2MB footprint for optimal space efficiency.</p>
     </Card>
       <Card
         title="AI-Backed Learning"
@@ -76,16 +76,16 @@ import RootLayout from '../layouts/RootLayout.astro';
     <p>Take your learning journey to new heights, even when the internet is out of reach. With <strong>Lingo Cards</strong>, enjoy the freedom to access your vocabulary flashcards anytime, anywhere, without the need for an internet connection.</p>
     </Card>
     </section>
-    <section class="w-full px-4 md:px-0">
-      <h2 class="text-4xl font-bold text-center text-blue-600 mb-4">
-        Ready to embark on your word mastery adventure? Watch our "How it Works" video to see <strong>Lingo Cards</strong> in action, and
-        let the journey begin!
+    <section class="w-full px-0">
+      <h2 class="text-2xl md:text-4xl px-4 md:px-12 font-bold text-center text-blue-600 mb-4">
+        Ready to embark on your word mastery adventure? Watch our "How it Works" video<span class="hidden md:inline"> to see <strong>Lingo Cards</strong> in action, and
+        let the journey begin!</span>
       </h2>
       <div class="aspect-[16/9]">
         <iframe allow="fullscreen;" width="100%" height="100%" src=`https://www.youtube.com/embed/${import.meta.env.PUBLIC_YOUTUBE_CODE}`></iframe>
       </div>
     </section>
-    <section class="flex flex-wrap gap-8 w-full justify-center">
+    <section class="flex flex-wrap gap-4 md:gap-8 w-full justify-center">
       <Plan
         title="Free Plan"
         subTitle="Standard Learning"
@@ -111,8 +111,8 @@ import RootLayout from '../layouts/RootLayout.astro';
         ]}
       />
     </section>
-    <section class="w-full text-center py-16 px-4 md:px-0 bg-blue-100/60">
-      <h2 class="text-4xl font-bold text-blue-600">Ready to Get Started?</h2>
+    <section class="w-full text-center py-4 md:py-12 px-4 md:px-12 bg-blue-100/60">
+      <h2 class="text-2xl md:text-4xl font-bold text-blue-600">Ready to Get Started?</h2>
       <div class="mt-8">
         <a href={import.meta.env.PUBLIC_APP_URL} class="bg-blue-600 text-white rounded-md py-4 px-8 hover:shadow-lg transition-shadow hover:cursor-pointer">Try it now</a>
       </div>
