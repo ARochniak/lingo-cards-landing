@@ -1,0 +1,32 @@
+---
+import GradientTitle from './GradientTitle.astro';
+
+interface Props {
+  title: string
+  imageSrc: string
+  creatorName: string
+  creatorDescription: string
+  content: string
+}
+
+const { title, imageSrc, creatorName, creatorDescription, content } = Astro.props;
+---
+
+<div class="space-y-4">
+  <GradientTitle><h2 class="text-3xl font-bold tracking-tight">{title}</h2></GradientTitle>
+  <div class="flex items-center space-x-4">
+    <img
+      src={imageSrc}
+      alt="Author"
+      class="rounded-full w-32 h-32"
+      style="aspect-ratio: 64 / 64; object-fit: cover;"
+    />
+    <div class="space-y-1.5">
+      <h3 class="text-xl font-semibold leading-none">{creatorName}</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-400">{creatorDescription}</p>
+    </div>
+  </div>
+  <blockquote class="text-lg leading-relaxed pl-4 border-l-2 border-gray-200 before:pl-0 before:border-0 before:content-['❝']">
+    {content}
+  </blockquote>
+</div>

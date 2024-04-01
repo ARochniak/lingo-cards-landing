@@ -3,6 +3,7 @@ import Card from '../components/Card.astro';
 import Plan from '../components/Plan.astro';
 import GradientTitle from '../components/GradientTitle.astro';
 import RootLayout from '../layouts/RootLayout.astro';
+import FromCreator from '../components/FromCreator.astro';
 ---
 
 <RootLayout title="Lingo Cards: Your Simple Path to Word Mastery">
@@ -104,6 +105,15 @@ import RootLayout from '../layouts/RootLayout.astro';
           title=`"How it Works" video to see Lingo Cards in action`
           src=`https://www.youtube.com/embed/${import.meta.env.PUBLIC_YOUTUBE_CODE}`></iframe>
       </div>
+    </section>
+    <section class="p-4 md:p-12 bg-blue-100/60 -mt-12 md:-mt-20">
+      <FromCreator
+        title="Few Words from the Creator"
+        imageSrc="/creator.webp"
+        creatorName="Anton Rochniak"
+        creatorDescription="Founder & Developer"
+        content="Welcome to Lingo Cards! As the creator of this project, I wanted to build a simple yet powerful flashcards app that prioritizes user experience above all else. I couldn't find the right app for my personal needs in learning words. Some were missing simplicity, like too many features that bloated the app and shifted focus from the main intention. Others lacked a great user experience, making it cumbersome to add new words with too many clicks and an unhandy interface. Many were also missing essential features for smooth learning, such as auto-pronunciation and providing context. With Lingo Cards, I aimed to combine all these great features – simplicity, user experience, and modern web features – into one seamless learning platform. I didn't bring really new ideas into the app, but rather tried to incorporate the best aspects of existing apps into a single, cohesive experience. Join me on this journey to revolutionize the way we learn languages. Happy studying!"
+       />
     </section>
     <section class="flex flex-wrap gap-4 md:gap-8 w-full justify-center">
       <Plan
