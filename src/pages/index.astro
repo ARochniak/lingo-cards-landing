@@ -4,6 +4,8 @@ import Plan from '../components/Plan.astro';
 import GradientTitle from '../components/GradientTitle.astro';
 import RootLayout from '../layouts/RootLayout.astro';
 import FromCreator from '../components/FromCreator.astro';
+
+const cardAnimationClass = '[&>*]:[animation-timeline:view(x)] sm:[&>*]:[animation-timeline:view()] [&>*]:animate-scale sm:[&>*]:[animation-range:0px_350px] [&>*]:[animation-range:-350px_300px]';
 ---
 
 <RootLayout title="Lingo Cards: Your Simple Path to Word Mastery">
@@ -43,7 +45,10 @@ import FromCreator from '../components/FromCreator.astro';
       </div>
     </section>
     <section
-      class="px-4 md:px-12 flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 overflow-auto w-screen pb-4 max-sm:-mb-4 justify-items-center max-w-screen-xl"
+      class:list={[
+        "px-4 md:px-12 flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-sm:overflow-auto w-screen pb-4 max-sm:-mb-4 justify-items-center max-w-screen-xl",
+        cardAnimationClass,
+      ]}
     >
       <Card title="Simplicity at Its Best" class="border-blue-600/20 border" titleClass="bg-blue-600">
         <p>
