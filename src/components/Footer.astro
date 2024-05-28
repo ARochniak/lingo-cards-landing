@@ -1,9 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import logoNoBgImage from '../../public/logo-no-bg.webp'
+---
+
 <footer
   class="w-full py-2 flex items-center justify-center gap-4 px-4 text-center md:gap-6 md:px-12 lg:gap-8 max-w-screen-xl mx-auto xl:gap-10"
 >
   <div class="space-y-1">
     <a aria-label="Logo link to home page" href="/">
-      <img alt="Lingo Cards logo" src="/logo-no-bg.webp" class="h-16 aspect-square object-contain" />
+      <Image src={logoNoBgImage} alt="Lingo Cards logo" class="h-16 aspect-square object-contain" />
     </a>
   </div>
   <div class="grid gap-1 text-sm sm:flex sm:gap-4 md:text-base">

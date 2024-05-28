@@ -5,6 +5,10 @@ import GradientTitle from '../components/GradientTitle.astro';
 import RootLayout from '../layouts/RootLayout.astro';
 import FromCreator from '../components/FromCreator.astro';
 import { YouTube } from '@astro-community/astro-embed-youtube';
+import { Image } from 'astro:assets';
+import upsertWhiteImage from '../../public/upsert-white.webp'
+import cardsBalckImage from '../../public/cards-black.webp'
+import creatorImage from '../../public/creator.webp'
 
 const cardAnimationClass = '[&>*]:[animation-timeline:view(x)] sm:[&>*]:[animation-timeline:view()] [&>*]:animate-scale sm:[&>*]:[animation-range:0px_350px] [&>*]:[animation-range:-350px_300px]';
 ---
@@ -30,17 +34,18 @@ const cardAnimationClass = '[&>*]:[animation-timeline:view(x)] sm:[&>*]:[animati
       </div>
       <div class="w-full lg:w-1/2 relative mx-auto my-6 flex justify-center lg:justify-end pr-4">
         <div class="aspect-[30/61] w-1/2 sm:w-1/3">
-          <img
+          <Image
             alt="upsert screen from the app"
             class="object-cover h-full border-purple-700/60 border-2 rounded-md shadow-md rotate-12 origin-center"
-            src="/upsert-white.webp"
-          />
-        </div>
-        <div class="aspect-[30/61] w-1/2 sm:w-1/3">
-          <img
+            src={upsertWhiteImage}
+            />
+          </div>
+          <div class="aspect-[30/61] w-1/2 sm:w-1/3">
+            <Image
             alt="cards screen from the app"
             class="h-full object-cover rounded-md shadow-xl -rotate-6 border-blue-800/70 border-2 origin-center"
-            src="/cards-black.webp"
+            src={cardsBalckImage}
+            densities={[0.5, 1]}
           />
         </div>
       </div>
@@ -110,7 +115,7 @@ const cardAnimationClass = '[&>*]:[animation-timeline:view(x)] sm:[&>*]:[animati
     <section class="p-4 md:p-12 bg-blue-100/60 -mt-12 md:-mt-20">
       <FromCreator
         title="Few Words from the Creator"
-        imageSrc="/creator.webp"
+        imageSrc={creatorImage}
         creatorName="Anton Rochniak"
         creatorDescription="Founder & Developer"
         content="Welcome to Lingo Cards! As the creator of this project, I wanted to build a simple yet powerful flashcards app that prioritizes user experience above all else. I couldn't find the right app for my personal needs in learning words. Some were missing simplicity, like too many features that bloated the app and shifted focus from the main intention. Others lacked a great user experience, making it cumbersome to add new words with too many clicks and an unhandy interface. Many were also missing essential features for smooth learning, such as auto-pronunciation and providing context. With Lingo Cards, I aimed to combine all these great features – simplicity, user experience, and modern web features – into one seamless learning platform. I didn't bring really new ideas into the app, but rather tried to incorporate the best aspects of existing apps into a single, cohesive experience. Join me on this journey to revolutionize the way we learn languages. Happy studying!"

@@ -1,9 +1,10 @@
 ---
 import GradientTitle from './GradientTitle.astro';
+import { Image } from 'astro:assets';
 
 interface Props {
   title: string
-  imageSrc: string
+  imageSrc: ImageMetadata
   creatorName: string
   creatorDescription: string
   content: string
@@ -16,7 +17,7 @@ const { title, imageSrc, creatorName, creatorDescription, content } = Astro.prop
   <GradientTitle><h2 class="text-3xl font-bold tracking-tight">{title}</h2></GradientTitle>
   <div class="flex items-center space-x-4 relative">
     <div class="w-32 h-32">
-      <img
+      <Image
         src={imageSrc}
         alt="Author"
         class="absolute aspect-square object-cover animate-imageFade [animation-timeline:view()] [animation-range:0vh_50vh] max-w-none"
