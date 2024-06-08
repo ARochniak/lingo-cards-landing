@@ -16,19 +16,12 @@ export default {
 				},
 				imageFade: {
 					from: {
-						height: '20rem',
-						width: '20rem',
-						top: '0',
-						left: '50%',
 						borderRadius: '1rem',
-						transform: 'translateX(-50%) translateY(-4rem)',
+						transform: 'translateX(50%)',
 					},
 					to: {
-						height: '8rem',
-						width: '8rem',
-						borderRadius: '50%',
 						left: '0%',
-						transform: 'translateX(0) translateY(0)',
+						transform: 'translateX(0)',
 					}
 				},
 				shake: {
