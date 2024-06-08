@@ -31,11 +31,26 @@ export default {
 						transform: 'translateX(0) translateY(0)',
 					}
 				},
+				shake: {
+					'0%': {
+						transform: 'rotateZ(0) scale(1.2)',
+					},
+					'33%': {
+						transform: 'rotateZ(-15deg)',
+					},
+					'66%': {
+						transform: 'rotateZ(15deg)',
+					},
+					'100%': {
+						transform: 'rotateZ(0) scale(1)',
+					},
+				},
 			}
 		},
 		animation: {
 			scale: 'scale linear both',
 			imageFade: 'imageFade linear both',
+			shake: 'shake linear both',
 		}
 	},
 	plugins: [],
