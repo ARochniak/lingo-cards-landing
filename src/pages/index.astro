@@ -100,16 +100,16 @@ const cardAnimationClass = '[&>*]:[animation-timeline:view(x)] sm:[&>*]:[animati
         </p>
       </Card>
     </section>
-    <section class="w-full px-0">
+    <section class="w-full max-w-screen-2xl mx-auto">
       <GradientTitle>
-        <h2 class="px-4 md:px-12 text-center mb-4 text-3xl">
+        <h2 class="text-center mb-4 text-3xl px-4 md:px-12">
           Ready to embark on your word mastery adventure? Watch our "How it Works" video<span class="hidden md:inline">
             to see <strong>Lingo Cards</strong> in action, and let the journey begin!</span
           >
         </h2>
       </GradientTitle>
-      <div class="aspect-[16/9]">
-        <YouTube class="max-w-none" id={import.meta.env.PUBLIC_YOUTUBE_CODE} title=`"How it Works" video to see Lingo Cards in action` />
+      <div class="aspect-[16/9] max-w-screen-2xl mx-auto">
+        <YouTube class="max-w-none flex-1" id={import.meta.env.PUBLIC_YOUTUBE_CODE} title=`"How it Works" video to see Lingo Cards in action` />
       </div>
     </section>
     <section class="p-4 md:p-12 bg-blue-100/60 -mt-12 md:-mt-20">
