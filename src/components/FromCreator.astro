@@ -15,7 +15,7 @@ const { title, imageSrc, creatorName, creatorDescription, content } = Astro.prop
 
 <div class="space-y-4 px-4 md:px-12 max-w-screen-2xl mx-auto">
   <GradientTitle><h2 class="text-3xl font-bold tracking-tight">{title}</h2></GradientTitle>
-  <div class="flex items-center space-x-4 relative animate-imageFade [animation-timeline:view()] [animation-range:0vh_50vh]">
+  <div class="flex items-center space-x-4 relative animate-imageFade [animation-timeline:view()] [animation-range:0vh_50vh] w-fit">
     <div class="w-32 h-32 shrink-0">
       <Image
         src={imageSrc}

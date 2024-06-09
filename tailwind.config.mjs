@@ -17,7 +17,7 @@ export default {
 				imageFade: {
 					from: {
 						borderRadius: '1rem',
-						transform: 'translateX(50%)',
+						transform: 'translateX(200%)',
 					},
 					to: {
 						left: '0%',
