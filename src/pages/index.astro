@@ -4,7 +4,7 @@ import Plan from '../components/Plan.astro';
 import GradientTitle from '../components/GradientTitle.astro';
 import RootLayout from '../layouts/RootLayout.astro';
 import FromCreator from '../components/FromCreator.astro';
-import { YouTube } from '@astro-community/astro-embed-youtube';
+//import { YouTube } from '@astro-community/astro-embed-youtube';
 import { Image } from 'astro:assets';
 import upsertWhiteImage from '../../public/upsert-white.webp'
 import cardsBalckImage from '../../public/cards-black.webp'
@@ -119,7 +119,7 @@ const cardAnimationClass = '[&>*]:[animation-timeline:view(x)] sm:[&>*]:[animati
         </p>
       </Card>
     </section>
-    <section class="w-full max-w-screen-2xl mx-auto">
+    <!-- <section class="w-full max-w-screen-2xl mx-auto">
       <GradientTitle>
         <h2 class="text-center mb-4 text-3xl px-4 md:px-12">
           Ready to embark on your word mastery adventure? Watch our "How it Works" video<span class="hidden md:inline">
@@ -130,7 +130,7 @@ const cardAnimationClass = '[&>*]:[animation-timeline:view(x)] sm:[&>*]:[animati
       <div class="aspect-[16/9] max-w-screen-2xl mx-auto">
         <YouTube class="max-w-none flex-1" id={import.meta.env.PUBLIC_YOUTUBE_CODE} title=`"How it Works" video to see Lingo Cards in action` />
       </div>
-    </section>
+    </section> -->
     <section class="p-4 md:p-12 bg-white -mt-12 md:-mt-20 w-full">
       <FromCreator
         title="Few Words from the Creator"
