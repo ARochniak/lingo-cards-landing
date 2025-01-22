@@ -10,8 +10,16 @@ import upsertWhiteImage from '../../public/upsert-white.webp'
 import cardsBalckImage from '../../public/cards-black.webp'
 import creatorImage from '../../public/creator.webp'
 import swipeCardImage from '../../public/swipe-card.webp'
+import CoinIcon from '../icons/Coin.astro';
 
 const cardAnimationClass = '[&>*]:[animation-timeline:view(x)] sm:[&>*]:[animation-timeline:view()] [&>*]:animate-scale sm:[&>*]:[animation-range:0px_350px] [&>*]:[animation-range:-350px_300px]';
+
+const featureCosts = [
+  { name: "Translation", cost: 1 },
+  { name: "Text example", cost: 2 },
+  { name: "Speech to text per second", cost: 3 },
+  { name: "Summarization of the words", cost: 30 },
+]
 ---
 
 <RootLayout title="Lingo Cards: Your Simple Path to Word Mastery">
@@ -140,30 +148,37 @@ const cardAnimationClass = '[&>*]:[animation-timeline:view(x)] sm:[&>*]:[animati
         content="Welcome to Lingo Cards! As the creator of this project, I wanted to build a simple yet powerful flashcards app that prioritizes user experience above all else. I couldn't find the right app for my personal needs in learning words. Some were missing simplicity, like too many features that bloated the app and shifted focus from the main intention. Others lacked a great user experience, making it cumbersome to add new words with too many clicks and an unhandy interface. Many were also missing essential features for smooth learning, such as auto-pronunciation and providing context. With Lingo Cards, I aimed to combine all these great features – simplicity, user experience, and modern web features – into one seamless learning platform. I didn't bring really new ideas into the app, but rather tried to incorporate the best aspects of existing apps into a single, cohesive experience. Join me on this journey to revolutionize the way we learn languages. Happy studying!"
        />
     </section>
-    <section class="flex flex-wrap gap-4 md:gap-8 w-full justify-center">
-      <Plan
-        title="Free Plan"
-        subTitle="Standard Learning"
-        price={0}
-        bulletPoints={[
-          { label: 'Access to Basic Features' },
-          { label: 'Data Syncing', isNegative: true },
-          { label: 'Translation Suggestions', isNegative: true },
-          { label: 'AI Enhancements', isNegative: true },
-        ]}
-      />
-      <Plan
-        title="Basic Plan"
-        subTitle="Enhanced Learning"
-        price={0}
-        crossedPrice={1}
-        bulletPoints={[
-          { label: 'AI Enhancements' },
-          { label: 'Cross-Device Syncing' },
-          { label: 'Translation Suggestions' },
-          { label: 'Infinite usage', isNegative: true },
-        ]}
-      />
+    <section>
+      <h1 class="text-3xl font-bold text-center mb-8">Choose Your Plan</h1>
+      <div class="flex flex-wrap gap-4 md:gap-8 w-full justify-center">
+        <Plan
+          name="Free"
+          price="$0.00"
+          coins={30}
+          href={new URL('/auth/register?plan=2', import.meta.env.PUBLIC_APP_URL).href}
+        />
+        <Plan
+          name="Basic"
+          price="$0.00"
+          crossedPrice="$1.00"
+          coins={15_000}
+          href={new URL('/auth/register?plan=1', import.meta.env.PUBLIC_APP_URL).href}
+        />
+      </div>
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold mb-4 text-center">Feature Costs</h2>
+        <ul class="space-y-4 max-w-96 mx-auto">
+          {featureCosts.map((feature) => (
+            <li class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium">{feature.name}</span>
+              <div class="flex items-center space-x-2">
+                <CoinIcon class="h-5 w-5 fill-yellow-400 stroke-yellow-600" />
+                <span class="font-semibold">{feature.cost}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
     <section class="w-full text-center py-4 md:py-12 px-4 md:px-12 bg-white">
       <GradientTitle><h2 class="mb-4">Ready to Get Started?</h2></GradientTitle>
