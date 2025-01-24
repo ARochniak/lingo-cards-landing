@@ -4,6 +4,7 @@ import Analytics from '@vercel/analytics/astro'
 
 const { title } = Astro.props;
 const measureId = import.meta.env.PUBLIC_GOOGLE_MEASUREMENT_ID;
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
 
 <!DOCTYPE html>
@@ -28,6 +29,7 @@ const measureId = import.meta.env.PUBLIC_GOOGLE_MEASUREMENT_ID;
     <meta property="twitter:title" content="Lingo-Cards: Your Simple Path to Word Mastery">
     <meta property="twitter:description" content="Unlock the world of words effortlessly with Lingo-Cards – the app designed for simple, engaging, and effective word learning.">
     <meta property="twitter:image" content="https://www.yourlandingpage.com/twitter-image.jpg">
+    <meta name="google-site-verification" content={googleSiteVerification} />
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Preconnect to YouTube -->
