@@ -47,7 +47,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 <script is:inline async src=`https://www.googletagmanager.com/gtag/js?id=${measureId}`></script>
 <script is:inline define:vars={{ measureId }}>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push();}
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', measureId);
